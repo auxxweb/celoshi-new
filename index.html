@@ -22,11 +22,11 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <header role="banner">
+        <header role="banner" style="position: fixed" class="navbar-wrapper">
             <nav class="navbar navbar-expand-md navbar-dark bg-light">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <img src="./images/logo/logo.png" alt="Celosia" />
+                        <img src="./images/logo/logo.png" class="nav-logo" alt="Celosia" />
                     </a>
                     <button
                         class="navbar-toggler"
@@ -46,6 +46,9 @@
                                 <a class="nav-link active" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="rooms.html">Rooms</a>
                             </li>
                             <li class="nav-item">
@@ -56,9 +59,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="activities.html">Activities</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
@@ -134,7 +134,7 @@
                         <div class="media d-block room mb-0">
                             <figure>
                                 <img
-                                    src="images/img_1.jpg"
+                                    src="images/gallery/room-3.jpg"
                                     alt="Generic placeholder image"
                                     class="img-fluid"
                                 />
@@ -148,7 +148,7 @@
                                 </div>
                             </figure>
                             <div class="media-body">
-                                <h3 class="mt-0"><a href="#">Premiere Room</a></h3>
+                                <h3 class="mt-0"><a href="#">Premium Room</a></h3>
                                 <ul class="room-specs">
                                     <li>
                                         <span class="ion-ios-people-outline"></span>24/7 front desk
@@ -176,7 +176,7 @@
                         <a
                             href="#"
                             class="media d-block room bg first-room"
-                            style="background-image: url(images/img_2.jpg)"
+                            style="background-image: url(images/gallery/room-5.jpg)"
                         >
                             <!-- <figure> -->
                             <div class="overlap-text">
@@ -194,7 +194,7 @@
                         <a
                             href="#"
                             class="media d-block room bg second-room"
-                            style="background-image: url(images/img_4.jpg)"
+                            style="background-image: url(images/gallery/room-7.jpg)"
                         >
                             <!-- <figure> -->
                             <div class="overlap-text">
@@ -275,7 +275,8 @@
                                 <div class="category">Rooms</div>
                                 <h3 class="mb-3"><a href="#">Gold</a></h3>
                                 <p class="mb-4">
-                                    Upgrade your experience with premium features and added benefits, offering the perfect balance of comfort and elegance.
+                                    Upgrade your experience with premium features and added
+                                    benefits, offering the perfect balance of comfort and elegance.
                                 </p>
                                 <p>
                                     <a href="#" class="btn btn-primary btn-outline-primary btn-sm"
@@ -296,7 +297,9 @@
                                 <div class="category">Rooms</div>
                                 <h3 class="mb-3"><a href="#">Diamond</a></h3>
                                 <p class="mb-4">
-                                    Indulge in luxury with top-tier services and exclusive perks, ensuring a sophisticated and unforgettable stay.                                </p>
+                                    Indulge in luxury with top-tier services and exclusive perks,
+                                    ensuring a sophisticated and unforgettable stay.
+                                </p>
                                 <p>
                                     <a href="#" class="btn btn-primary btn-outline-primary btn-sm"
                                         >Book Now</a
@@ -392,6 +395,17 @@
                 />
             </svg>
         </div>
+
+        <script>
+            window.addEventListener('scroll', function () {
+                let header = document.querySelector('.navbar-wrapper');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        </script>
 
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.0.js"></script>
